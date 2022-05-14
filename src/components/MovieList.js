@@ -1,32 +1,10 @@
 // a container for all the Movie components and their data.
 import React from "react";
 
-import ReviewList from './ReviewList.js'
 import Movie from "./Movie.js";
-import Stars from "./Stars.js";
-
 
 export default class Container extends React.Component {
-    
-
-    // countClicks(name){
-    //     this.setState(state => {
-    //         state.counts[name]
-    //         ? state.counts[name] += 1
-    //         : state.counts[name] = 1;
-    //         console.log(state);
-
-    //     if(state.counts[name] > state.highestCount){
-    //         state.highestCount = state.counts[name];
-    //         state.highestCountName = name;
-    //     }
-    //         return state;
-            
-    //     })
-    // }
-    
-
-    render(){
+        render(){
         let movies = [
             {
                 title: "Dune",

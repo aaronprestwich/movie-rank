@@ -1,25 +1,24 @@
 // a container inside of a Movie that houses Review components.
 
 import React from "react";
-
-import Review from './Review.js';
-import ReviewForm from './ReviewForm.js';
-
+import Review from "./Review";
 export default class ReviewList extends React.Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            reviews: props.reviews,
+            content: props.content            
+        };
+    }
     render(){
-        return(
-            <div>
-                <div className='card bg-light'>
-                <div className='card-header bg-dark text-white'>
-                   <Review/>
-                </div>
-                
-                <div className='card-footer bg-light'>                    
-                    <ReviewForm/>                    
-                </div>
-                </div>                            
-            </div>            
-        );
+        let reviews;
+        if(this.state.reviews){
+            reviews = this.state.reviews.map((review, index) => <Review key ={index} {...review}/>);            
+        }
+        return (
+            <div className="m-3">
+                {reviews}
+            </div>
+        )
     }
 }

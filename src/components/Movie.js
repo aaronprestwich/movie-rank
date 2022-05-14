@@ -3,6 +3,7 @@ import React from "react";
 
 import Stars from "./Stars";
 import ReviewList from "./ReviewList";
+import ReviewForm from "./ReviewForm";
 
 export default class Movie extends React.Component{
     constructor(props){
@@ -20,14 +21,14 @@ export default class Movie extends React.Component{
         }
         return(
             <div>
-                <div className="card bg-light">
+                <div className="card bg-dark text-light m-5 p-5">
 
                     <div className="card-body bg-light">
                         {movies}
                         {this.state.title}
-                        {this.state.genre}
-                        <Stars/>
+                        {this.state.genre}                        
                     </div>
+                    <ReviewForm/>
                 </div>
                 <ReviewList/>
             </div>

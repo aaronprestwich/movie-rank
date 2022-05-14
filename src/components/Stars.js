@@ -1,7 +1,9 @@
 // a one to five-star rating component that allows users to rate something 
 //(movies in this case, but remember that components are reusable, so you could use it elsewhere!)
 
+// found five-star rating component from https://www.youtube.com/watch?v=eDw46GYAIDQ
 import React, {useState} from "react";
+// uses react-icon to get star image
 import {FaStar} from 'react-icons/fa';
 
 const Stars = () => {
